@@ -4,28 +4,31 @@
     "version": "1.0",
     "description": "Automatically pauses YouTube videos when the tab or window changes.",
     "permissions": [
-        "tabs"
+      "tabs",
+      "storage"
     ],
     "content_scripts": [
-        {
-            "matches": [
-                "*://www.youtube.com/*"
-            ],
-            "js": [
-                "content.js"
-            ]
-        }
+      {
+        "matches": [
+          "*://www.youtube.com/*"
+        ],
+        "js": [
+          "content.js"
+        ]
+      }
     ],
     "icons": {
-        "16": "youtube_pause_icon.jpg",
-        "48": "youtube_pause_icon.jpg",
-        "128": "youtube_pause_icon.jpg"
+      "16": "youtube.png",
+      "48": "youtube.png",
+      "128": "youtube.png"
     },
     "action": {
-        "default_icon": {
-            "16": "youtube_pause_icon.jpg",
-            "48": "youtube_pause_icon.jpg",
-            "128": "youtube_pause_icon.jpg"
-        }
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "youtube.png",
+        "48": "youtube.png",
+        "128": "youtube.png"
+      }
     }
-}
+  }
+  
